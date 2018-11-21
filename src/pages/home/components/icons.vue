@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper :options="swiperOption">
+    <swiper>
       <swiper-slide  v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -54,8 +54,7 @@ icon-desc
             "id": "0009",
             "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
             "desc": "一日游"
-          }],
-          swiperOption: {}
+          }]
         }
     },
     computed: {
@@ -79,35 +78,37 @@ icon-desc
   .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%
-  .icon
-    position: relative
-    float: left
-    width: 25%
-    padding-bottom: 25%
-    height: 0
-    overflow: hidden
-    .icon-img
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: .44rem
-      box-sizing: border-box
-      padding: .1rem
-      .icon-img-content
-        height: 100%
-        display: block
-        margin: 0 auto
-    .icon-desc
-      position: absolute
-      left: 0
-      right: 0
-      bottom: 0
-      height: .44rem
-      line-height: .44rem
-      color: $darkTextColor
-      text-align: center
+  .icons
+    margin-top: .2rem
+    .icon
+      position: relative
+      float: left
+      width: 25%
+      padding-bottom: 25%
+      height: 0
       overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis
+      .icon-img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: .44rem
+        box-sizing: border-box
+        padding: .1rem
+        .icon-img-content
+          height: 100%
+          display: block
+          margin: 0 auto
+      .icon-desc
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: .44rem
+        line-height: .44rem
+        color: $darkTextColor
+        text-align: center
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
 </style>
